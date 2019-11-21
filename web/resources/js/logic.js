@@ -26,7 +26,7 @@ function showList() {
             } else {
                 $(result).each(function () {
                     htmls += '<li>';
-                    htmls += '<input type="hidden" id="tno" name="tno" value="' + this.tno + '">\n';
+                    htmls += '<input type="hidden" class="tno" name="tno" value="' + this.tno + '">\n';
                     htmls += '<span><i class="fa fa-trash"></i></span>' + this.regdate + " " + this.content + '\n';
                     htmls += ' </li>';
                 });
@@ -81,8 +81,10 @@ $(document).on('click', ".fa-clock-o", function () {
 
 });
 
-$("ul").on("click", "span", function(event){
-    var tno = $("#tno").val();
+// 삭제 버튼 클릭 이벤트
+
+$(document).on('click','.fa.fa-trash', function(e){
+    var tno = $(e.target).closest('li') .find('.tno').val();
     var paramData = JSON.stringify({
         "tno": tno
     });
