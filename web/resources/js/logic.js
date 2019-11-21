@@ -22,6 +22,7 @@ function showList() {
             var htmls = ""
             if (result.length < 1) {
                 alert("일정이 존재하지 않습니다.");
+                $("#allList").empty();
             } else {
                 $(result).each(function () {
                     htmls += '<li>';
