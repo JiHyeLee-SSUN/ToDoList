@@ -17,12 +17,22 @@ public class BoardDAOImpl implements BoardDAO {
     private SqlSession sqlSession;
 
     @Override
-    public List<BoardVO> read() throws Exception {
-        return sqlSession.selectList(NAMESPACE+".read");
+    public List<BoardVO> readAsc() throws Exception {
+        return sqlSession.selectList(NAMESPACE+".readAsc");
+    }
+
+    @Override
+    public List<BoardVO> readDesc() throws Exception {
+        return sqlSession.selectList(NAMESPACE+".readDesc");
     }
 
     @Override
     public int createList(BoardVO boardVO) throws Exception {
         return sqlSession.insert(NAMESPACE+".create", boardVO);
+    }
+
+    @Override
+    public int deleteList(BoardVO boardVO) throws Exception {
+        return sqlSession.delete(NAMESPACE+".delete", boardVO);
     }
 }

@@ -85,3 +85,12 @@ input:focus {
     color: gray;
     text-decoration: line-through;
 }
+
+.time_asc{
+    color : white;
+}
+
+.time_dsc{
+
+    color: #c2e59c;
+}

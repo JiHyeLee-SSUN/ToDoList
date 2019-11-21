@@ -19,9 +19,14 @@ public class AjaxController {
     @Autowired
     private BoardService boardService;
 
-    @RequestMapping(value = "readAll", method = RequestMethod.GET)
-    public List<BoardVO> readAll() throws Exception {
-        return boardService.read();
+    @RequestMapping(value = "readAsc", method = RequestMethod.GET)
+    public List<BoardVO> readAsc() throws Exception {
+        return boardService.readAsc();
+    }
+
+    @RequestMapping(value = "readDesc", method = RequestMethod.GET)
+    public List<BoardVO> readDesc() throws Exception {
+        return boardService.readDesc();
     }
 
     @RequestMapping(value = "create", method = RequestMethod.POST)
@@ -30,6 +35,23 @@ public class AjaxController {
 
         try {
             boardService.createList(boardVO);
+            result.put("status", "OK");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            result.put("status", "False");
+        }
+
+        return result;
+
+    }
+
+    @RequestMapping(value = "delete", method = RequestMethod.POST)
+    public Map<String, Object> delete(@RequestBody BoardVO boardVO) throws Exception {
+        Map<String, Object> result = new HashMap<>();
+
+        try {
+            boardService.deleteList(boardVO);
             result.put("status", "OK");
 
         } catch (Exception e) {

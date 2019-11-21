@@ -15,7 +15,8 @@
 <body>
 
 <div id="container">
-    <h1>To-Do List <i class="fa fa-plus" aria-hidden="true"></i></h1>
+
+    <h1>To-Do List <i class="fa fa-clock-o" aria-hidden="true"></i> <i class="fa fa-plus" aria-hidden="true"></i></h1>
     <input id="write" type="text" placeholder="Add New Todo">
 
     <ul>
