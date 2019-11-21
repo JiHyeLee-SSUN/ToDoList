@@ -4,6 +4,7 @@ $(function () {
     showList();
 });
 
+// 리스트 출력 이벤트
 
 function showList() {
     var url;
@@ -42,6 +43,8 @@ function showList() {
 
 }
 
+// 내용 추가 이벤트
+
 $(document).on('click', ".fa-plus", function () {
     var todoText = $("#write").val();
     if (todoText.length > 0) {
@@ -69,6 +72,8 @@ $(document).on('click', ".fa-plus", function () {
         });
     }
 });
+
+// 시간 정렬 이벤트
 
 $(document).on('click', ".fa-clock-o", function () {
     time++;

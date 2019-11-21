@@ -19,16 +19,17 @@ public class AjaxController {
     @Autowired
     private BoardService boardService;
 
+    // 리스트 오름차순 조회
     @RequestMapping(value = "readAsc", method = RequestMethod.GET)
     public List<BoardVO> readAsc() throws Exception {
         return boardService.readAsc();
     }
-
+    // 리스트 내림차순 조회
     @RequestMapping(value = "readDesc", method = RequestMethod.GET)
     public List<BoardVO> readDesc() throws Exception {
         return boardService.readDesc();
     }
-
+    // 리스트 작성
     @RequestMapping(value = "create", method = RequestMethod.POST)
     public Map<String, Object> create(@RequestBody BoardVO boardVO) throws Exception {
         Map<String, Object> result = new HashMap<>();
@@ -45,7 +46,7 @@ public class AjaxController {
         return result;
 
     }
-
+    //리스트 삭제
     @RequestMapping(value = "delete", method = RequestMethod.POST)
     public Map<String, Object> delete(@RequestBody BoardVO boardVO) throws Exception {
         Map<String, Object> result = new HashMap<>();
