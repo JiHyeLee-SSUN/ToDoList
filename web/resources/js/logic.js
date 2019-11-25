@@ -57,7 +57,7 @@ $(document).on('click', ".fa-plus", function () {
         };
         $.ajax({
 
-            url       : "create"
+            url       : "/"
             , headers : headers
             , data    : paramData
             , type    : 'POST'
@@ -95,13 +95,13 @@ $(document).on('click','.fa.fa-trash', function(e){
     });
     var headers = {
         "Content-Type"            : "application/json"
-        , "X-HTTP-Method-Override": "POST"
+        , "X-HTTP-Method-Override": "DELETE"
     };
 
     $.ajax({
-        url: "delete"
+        url: "/"
         , data : paramData
-        , type : 'POST'
+        , type : 'DELETE'
         , dataType : 'text'
         , headers : headers
         , success: function(result){

@@ -30,7 +30,7 @@ public class AjaxController {
         return boardService.readDesc();
     }
     // 리스트 작성
-    @RequestMapping(value = "create", method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public Map<String, Object> create(@RequestBody BoardVO boardVO) throws Exception {
         Map<String, Object> result = new HashMap<>();
 
@@ -47,7 +47,7 @@ public class AjaxController {
 
     }
     //리스트 삭제
-    @RequestMapping(value = "delete", method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.DELETE)
     public Map<String, Object> delete(@RequestBody BoardVO boardVO) throws Exception {
         Map<String, Object> result = new HashMap<>();
 
