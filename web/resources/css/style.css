@@ -28,14 +28,9 @@ li {
     color: #666;
 }
 
-li:nth-child(2n) {
+li:nth-of-type(2n) {
     background: #f7f7f7;
 }
-
-/*Yuxaridaki kimi eyni effekti verir*/
-/*li:nth-of-type(2n) {
-	background: #f7f7f7;
-}*/
 
 span {
     background: #e74c3c;

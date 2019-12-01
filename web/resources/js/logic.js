@@ -32,15 +32,11 @@ function showList() {
                     htmls += ' </li>';
                 });
                 $("#allList").html(htmls);
-
             }
         }, error: function (error) {
             console.log("에러 : " + error);
         }
-
     });
-
-
 }
 
 // 내용 추가 이벤트
@@ -56,18 +52,19 @@ $(document).on('click', ".fa-plus", function () {
             , "X-HTTP-Method-Override": "POST"
         };
         $.ajax({
-
             url       : "/"
             , headers : headers
             , data    : paramData
             , type    : 'POST'
-            , dataType: 'text'
+            , dataType: 'json'
             , success : function (result) {
+                console.log(result);
                 showList();
                 $("#write").val("");
             }
             , error   : function (error) {
-                console.log("에러 : " + error);
+                console.log(error);
+                console.log(error.status);
             }
         });
     }
@@ -102,7 +99,7 @@ $(document).on('click','.fa.fa-trash', function(e){
         url: "/"
         , data : paramData
         , type : 'DELETE'
-        , dataType : 'text'
+        , dataType : 'json'
         , headers : headers
         , success: function(result){
             showList();
