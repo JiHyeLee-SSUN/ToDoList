@@ -53,7 +53,6 @@ CREATE TABLE tbl_board (
 <b>< Function ></b>
 
 <ol>
-  <b><li>회원가입</li></b>
   <ul>
     <ol>
       <b><li>기본 기능</li></b>
