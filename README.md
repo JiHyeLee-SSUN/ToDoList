@@ -1,5 +1,44 @@
 # TODO LIST
 <br>
+<hr>
+<ul>
+  <li>개요</li>
+    <ul>
+      <li>한글과컴퓨터의 pre-test 구현 과제</li>
+      <li>요구사항을 기반으로 TODO LIST를 구현한다</li>
+    </ul>
+</ul>
+<hr>
+
+<b>< Requirements ></b>
+
+<ul>
+  <li>개요</li>
+    <ul>
+      <li>To Do List 에 내용을 추가, 삭제 가능하며 결과를 정렬해서 볼 수 있도록 웹페이지 구현</li>
+      
+    </ul>
+</ul>
+<ul>
+  <li>Language</li>
+    <ul>
+      <li>클라이언트 개발 지원자는 JavaScript,HTML,CSS 필수사용 </li>
+      <li>페이지 이동하지 말것(single-page application)</li>
+      <li>서버 개발 지원자는 UI없이 요구사항을 필수 기능을 Restful API로 구현 가능</li>
+    </ul>
+</ul>
+<ul>
+  <li>필수기능</li>
+    <ul>
+      <li>항목 추가 / 삭제 </li>
+      <li>정렬 시간순 / 항목순</li>
+      <li>DB사용</li>
+      <li>서버 클라이언트 데이타 전송이 필요한 경우 JSON형식 (선택 사항)</li>
+    </ul>
+</ul>
+
+<hr>
+
 
 <b>< Used Language, Library ></b>
 
@@ -66,5 +105,7 @@ CREATE TABLE tbl_board (
         </ul>
     </ol>   
   </ul>
-
 </ol>
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/uYFI19fpgtU/0.jpg)](https://www.youtube.com/watch?v=uYFI19fpgtU)
+
