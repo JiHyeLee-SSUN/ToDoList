@@ -16,9 +16,9 @@
   <li>개요</li>
     <ul>
       <li>To Do List 에 내용을 추가, 삭제 가능하며 결과를 정렬해서 볼 수 있도록 웹페이지 구현</li>
-      
-    </ul>
+  </ul>
 </ul>
+
 <ul>
   <li>Language</li>
     <ul>
@@ -27,6 +27,7 @@
       <li>서버 개발 지원자는 UI없이 요구사항을 필수 기능을 Restful API로 구현 가능</li>
     </ul>
 </ul>
+
 <ul>
   <li>필수기능</li>
     <ul>
